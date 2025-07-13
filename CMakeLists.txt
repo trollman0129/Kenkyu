@@ -42,7 +42,7 @@ set(SOUNDTOUCH_SRCS
 )
 
 # SoundTouch ライブラリを作成 (静的ライブラリとして)
-add_library(soundtouch STATIC ${SOUNDTOUCH_SRCS})
+add_library(soundtouch STATIC "${CMAKE_CURRENT_SOURCE_DIR}/lib/soundtouch/source")
 
 # SoundTouchのヘッダーファイルパスを追加
 target_include_directories(soundtouch PUBLIC
