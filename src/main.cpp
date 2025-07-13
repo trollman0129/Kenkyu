@@ -3,13 +3,12 @@
 
 // #include "wave.h"
 #include "portaudio.h"
-
 #include <iostream>
 
 int main(){
     char path[64] = "test_wav/test.wav";
     
-    printf("Hello");
+    std::cout << "helloworld";
 
     return 0;
 }
