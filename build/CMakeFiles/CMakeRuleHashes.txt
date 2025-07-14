@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+bd50cf6c0a68033bbca700c252acf5da lib/libsndfile/CMakeFiles/check
+b7ca97986997e7aba63e6530366d6cd1 lib/portaudio/CMakeFiles/uninstall
