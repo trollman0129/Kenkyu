@@ -6,7 +6,7 @@ C_DEFINES = -DPAWIN_USE_WDMKS_DEVICE_INFO -DPA_LITTLE_ENDIAN -DPORTAUDIO_CMAKE_G
 
 C_INCLUDES = -IC:\kenkyu\Kenkyu\lib\portaudio\src\common -IC:\kenkyu\Kenkyu\build\lib\portaudio -IC:\kenkyu\Kenkyu\lib\portaudio\src\os\win -IC:\kenkyu\Kenkyu\lib\portaudio\include
 
-C_FLAGS =  -O3 -std=gnu99 -Wall -Wextra -g -g
+C_FLAGS =  -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -g -g
 
 # Custom defines: lib/portaudio/CMakeFiles/portaudio.dir/src/common/pa_allocation.c.obj_DEFINES = UNICODE;_UNICODE
 

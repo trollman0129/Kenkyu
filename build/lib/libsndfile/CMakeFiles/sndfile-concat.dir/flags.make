@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/sndfile-concat.dir/includes_C.rsp
 
-C_FLAGS =  -O3 -std=gnu99 -Wall -Wextra -g -g
+C_FLAGS =  -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -g -g
 

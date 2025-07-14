@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/test_main.dir/includes_C.rsp
 
-C_FLAGS =  -O3 -std=gnu99 -Wall -Wextra -g -g
+C_FLAGS =  -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -O3 -std=gnu99 -Wall -Wextra -g -g
 

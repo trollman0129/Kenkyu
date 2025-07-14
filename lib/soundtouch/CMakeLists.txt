@@ -22,20 +22,20 @@ endif()
 # SoundTouch library
 
 add_library(SoundTouch
-  ${SOUNDTOUCH_SOURCE_DIR}/AAFilter.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/BPMDetect.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/cpu_detect_x86.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/FIFOSampleBuffer.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/FIRFilter.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/InterpolateCubic.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/InterpolateLinear.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/InterpolateShannon.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/mmx_optimized.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/PeakFinder.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/RateTransposer.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/SoundTouch.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/sse_optimized.cpp
-  ${SOUNDTOUCH_SOURCE_DIR}/TDStretch.cpp
+  source/SoundTouch/AAFilter.cpp
+  source/SoundTouch/BPMDetect.cpp
+  source/SoundTouch/cpu_detect_x86.cpp
+  source/SoundTouch/FIFOSampleBuffer.cpp
+  source/SoundTouch/FIRFilter.cpp
+  source/SoundTouch/InterpolateCubic.cpp
+  source/SoundTouch/InterpolateLinear.cpp
+  source/SoundTouch/InterpolateShannon.cpp
+  source/SoundTouch/mmx_optimized.cpp
+  source/SoundTouch/PeakFinder.cpp
+  source/SoundTouch/RateTransposer.cpp
+  source/SoundTouch/SoundTouch.cpp
+  source/SoundTouch/sse_optimized.cpp
+  source/SoundTouch/TDStretch.cpp
 )
 target_include_directories(SoundTouch PUBLIC
    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
