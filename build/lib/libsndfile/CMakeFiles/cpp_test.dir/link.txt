@@ -1,3 +1,0 @@
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cpp_test.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\cpp_test.dir/objects.a @CMakeFiles\cpp_test.dir\objects1.rsp
-C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\cpp_test.dir/objects.a -Wl,--no-whole-archive -o tests\cpp_test.exe -Wl,--out-implib,libcpp_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cpp_test.dir\linkLibs.rsp

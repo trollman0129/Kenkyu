@@ -18,7 +18,7 @@
 
 #define	HAS_STRING_H 	1		/* /usr/include/string.h 	*/
 
-#define	HAS_UNISTD_H	1		/* /usr/include/unistd.h	*/
+#define	HAS_UNISTD_H	0		/* /usr/include/unistd.h	*/
 #define	HAS_UTIME	1		/* POSIX utime(path, times)	*/
 #define	HAS_UTIME_H	1		/* UTIME header file		*/
 

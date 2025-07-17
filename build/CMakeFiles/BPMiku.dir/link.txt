@@ -1,3 +1,0 @@
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\BPMiku.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\BPMiku.dir/objects.a @CMakeFiles\BPMiku.dir\objects1.rsp
-C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\BPMiku.dir/objects.a -Wl,--no-whole-archive -o BPMiku.exe -Wl,--out-implib,libBPMiku.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BPMiku.dir\linkLibs.rsp

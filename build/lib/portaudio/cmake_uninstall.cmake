@@ -1,14 +1,14 @@
-if(NOT EXISTS "C:/kenkyu/Kenkyu/build/lib/portaudio/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: C:/kenkyu/Kenkyu/build/lib/portaudio/install_manifest.txt")
-endif(NOT EXISTS "C:/kenkyu/Kenkyu/build/lib/portaudio/install_manifest.txt")
+if(NOT EXISTS "C:/Users/KANAKEN/Downloads/kenkyu/BPMiku/build/lib/portaudio/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: C:/Users/KANAKEN/Downloads/kenkyu/BPMiku/build/lib/portaudio/install_manifest.txt")
+endif(NOT EXISTS "C:/Users/KANAKEN/Downloads/kenkyu/BPMiku/build/lib/portaudio/install_manifest.txt")
 
-file(READ "C:/kenkyu/Kenkyu/build/lib/portaudio/install_manifest.txt" files)
+file(READ "C:/Users/KANAKEN/Downloads/kenkyu/BPMiku/build/lib/portaudio/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")
   if(IS_SYMLINK "$ENV{DESTDIR}${file}" OR EXISTS "$ENV{DESTDIR}${file}")
     exec_program(
-      "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+      "C:/Program Files/Microsoft Visual Studio/2022/Preview/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
       OUTPUT_VARIABLE rm_out
       RETURN_VALUE rm_retval
       )

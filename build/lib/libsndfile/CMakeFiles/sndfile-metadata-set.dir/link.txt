@@ -1,3 +1,0 @@
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\sndfile-metadata-set.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\sndfile-metadata-set.dir/objects.a @CMakeFiles\sndfile-metadata-set.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe  -O3 -std=gnu99 -Wall -Wextra -g -Wl,--whole-archive CMakeFiles\sndfile-metadata-set.dir/objects.a -Wl,--no-whole-archive -o programs\sndfile-metadata-set.exe -Wl,--out-implib,libsndfile-metadata-set.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\sndfile-metadata-set.dir\linkLibs.rsp
