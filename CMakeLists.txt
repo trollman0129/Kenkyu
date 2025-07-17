@@ -17,44 +17,57 @@ endif()
 # ====================================================================
 
 # --- PortAudio の組み込み ---
-add_subdirectory(lib/portaudio) # third_party から lib に変更
+add_subdirectory(lib/portaudio)
 set(PORTAUDIO_TARGET portaudio_static) # 通常、PortAudioが提供する静的ライブラリ名
 
 # --- libsndfile の組み込み ---
-add_subdirectory(lib/libsndfile) # third_party から lib に変更
+add_subdirectory(lib/libsndfile)
 set(LIBSNDFILE_TARGET sndfile) # libsndfileのターゲット名
 
 # --- SoundTouch の組み込み ---
-# SoundTouchのソースコードがあるディレクトリを指定
-set(SOUNDTOUCH_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/soundtouch/source") # third_party から lib に変更
+# ★★★★ 以下のブロック全体を削除またはコメントアウト ★★★★
+# set(SOUNDTOUCH_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/soundtouch/source")
+# set(SOUNDTOUCH_SRCS
+#     ${SOUNDTOUCH_SOURCE_DIR}/AAFilter.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/BPMDetect.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/cpu_detect.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/FIFOSampleBuffer.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/PeakFinder.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/RateTransposer.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/SoundTouch.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/TDStretch.cpp
+#     ${SOUNDTOUCH_SOURCE_DIR}/VSTypes.cpp # このファイルはバージョンによって存在しない場合があります。ビルドエラーが出たら削除してください。
+# )
+# ★★★★ ここまで削除またはコメントアウト ★★★★
 
-# SoundTouch のソースファイルをリストアップ
-set(SOUNDTOUCH_SRCS
-    ${SOUNDTOUCH_SOURCE_DIR}/AAFilter.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/BPMDetect.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/cpu_detect.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/FIFOSampleBuffer.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/PeakFinder.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/RateTransposer.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/SoundTouch.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/TDStretch.cpp
-    ${SOUNDTOUCH_SOURCE_DIR}/VSTypes.cpp # このファイルはバージョンによって存在しない場合があります。ビルドエラーが出たら削除してください。
-)
-
+# ★★★★ 以下の add_library も削除またはコメントアウト ★★★★
 # SoundTouch ライブラリを作成 (静的ライブラリとして)
-add_library(soundtouch STATIC "${CMAKE_CURRENT_SOURCE_DIR}/lib/soundtouch/source")
+# add_library(soundtouch STATIC "${CMAKE_CURRENT_SOURCE_DIR}/lib/soundtouch/source") # <- この行が問題
+# ★★★★ ここまで削除またはコメントアウト ★★★★
 
-# SoundTouchのヘッダーファイルパスを追加
-target_include_directories(soundtouch PUBLIC
-    ${SOUNDTOUCH_SOURCE_DIR}
-)
+# ★★★★ 以下の SoundTouchのヘッダーパス追加も削除またはコメントアウト ★★★★
+# target_include_directories(soundtouch PUBLIC
+#     ${SOUNDTOUCH_SOURCE_DIR}
+# )
+# ★★★★ ここまで削除またはコメントアウト ★★★★
 
-# SoundTouchの最適化オプション (任意)
-if(MSVC)
-    target_compile_options(soundtouch PRIVATE "/arch:SSE2")
-elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    target_compile_options(soundtouch PRIVATE -msse -msse2 -mfpmath=sse)
-endif()
+# ★★★★ 以下の SoundTouchの最適化オプションも削除またはコメントアウト ★★★★
+# if(MSVC)
+#     target_compile_options(soundtouch PRIVATE "/arch:SSE2")
+# elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+#     target_compile_options(soundtouch PRIVATE -msse -msse2 -mfpmath=sse)
+# endif()
+# ★★★★ ここまで削除またはコメントアウト ★★★★
+
+
+# --- 正しい SoundTouch の組み込み方法 ---
+# SoundTouchのCMakeLists.txtを直接サブディレクトリとして追加します。
+# これにより、SoundTouch自身が自身のライブラリをビルドします。
+add_subdirectory(lib/soundtouch) # ← これだけ残す！
+
+# SoundTouchがビルドするライブラリのターゲット名
+# SoundTouchのCMakeLists.txtでは、ライブラリ名が 'SoundTouch' (Sが大文字) になっています。
+set(SOUNDTOUCH_TARGET SoundTouch) # ← ここも 'SoundTouch' (Sが大文字) を使う
 
 
 # ====================================================================
@@ -77,7 +90,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 target_link_libraries(${PROJECT_NAME} PUBLIC
     ${PORTAUDIO_TARGET}
     ${LIBSNDFILE_TARGET}
-    ${SOUNDTOUCH_TARGET} # SoundTouchライブラリのターゲット名
+    ${SOUNDTOUCH_TARGET} # SoundTouchライブラリのターゲット名 (Sが大文字であることを確認)
 )
 
 if(APPLE)

@@ -1,4 +1,3 @@
-C:/kenkyu/Kenkyu/build/CMakeFiles/soundtouch.dir
 C:/kenkyu/Kenkyu/build/CMakeFiles/BPMiku.dir
 C:/kenkyu/Kenkyu/build/CMakeFiles/edit_cache.dir
 C:/kenkyu/Kenkyu/build/CMakeFiles/rebuild_cache.dir
@@ -75,3 +74,11 @@ C:/kenkyu/Kenkyu/build/lib/libsndfile/CMakeFiles/list_install_components.dir
 C:/kenkyu/Kenkyu/build/lib/libsndfile/CMakeFiles/install.dir
 C:/kenkyu/Kenkyu/build/lib/libsndfile/CMakeFiles/install/local.dir
 C:/kenkyu/Kenkyu/build/lib/libsndfile/CMakeFiles/install/strip.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/SoundTouch.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/soundstretch.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/edit_cache.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/rebuild_cache.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/list_install_components.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/install.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/install/local.dir
+C:/kenkyu/Kenkyu/build/lib/soundtouch/CMakeFiles/install/strip.dir

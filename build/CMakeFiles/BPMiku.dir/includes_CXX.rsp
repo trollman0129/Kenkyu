@@ -1,1 +1,1 @@
--IC:/kenkyu/Kenkyu/include -IC:/kenkyu/Kenkyu/lib/portaudio/include
+-IC:/kenkyu/Kenkyu/include -IC:/kenkyu/Kenkyu/lib/portaudio/include -IC:/kenkyu/Kenkyu/lib/soundtouch/include

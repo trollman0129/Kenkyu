@@ -1,1 +1,1 @@
- lib/portaudio/libportaudio.a lib/libsndfile/libsndfile.dll.a -lwinmm -lsetupapi -lole32 -luuid -lwinmm -ldsound -lole32 -luuid -lsetupapi -lole32 -luuid -lsetupapi -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ lib/portaudio/libportaudio.a lib/libsndfile/libsndfile.dll.a lib/soundtouch/libSoundTouch.a -lwinmm -lsetupapi -lole32 -luuid -lwinmm -ldsound -lole32 -luuid -lsetupapi -lole32 -luuid -lsetupapi -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
